@@ -1,0 +1,275 @@
+* {
+  font-family: sans-serif;
+  font-size: 16px;
+  box-sizing: cover;
+}
+
+body {
+  background-image: linear-gradient(
+    to right,
+    rgba(69, 114, 150, 1),
+    rgba(137, 169, 194, 1)
+  );
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: transparent;
+  letter-spacing: 0.5rem;
+  font-family: "Poetsen One", sans-serif;
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px;
+  padding: 5px;
+  font-weight: 700;
+  background-image: linear-gradient(
+    to right,
+    rgba(248, 245, 246, 1),
+    rgb(242, 232, 53)
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  border: #9e9ba5 2px solid;
+  animation: glow 1s infinite alternate;
+}
+
+h2 {
+  display: block;
+  font-size: 1rem;
+  width: 100%;
+  margin: 25px auto;
+  text-align: center;
+  color: bisque;
+  font-family: "Poetsen One", sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+}
+
+.board {
+  display: flex;
+  width: 80%;
+  height: 80%;
+  justify-content: space-between;
+  align-items: center;
+
+  margin: 0 auto;
+}
+
+.board__left,
+.board__right {
+  width: 50%;
+  padding: 10px 0;
+}
+
+.image {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.img {
+  box-shadow: 0 0 2px 0 white;
+  border-radius: 50%;
+  width: 100%;
+}
+
+.right__img {
+  transform: scalex(-1);
+  -webkit-transfrom: scaleX(-1);
+}
+
+.vertical-divider {
+  width: 2px;
+  height: 50%;
+  background-color: #9e9ba5;
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px 0 white;
+  }
+  50% {
+    box-shadow: 0 0 10px 5px white;
+  }
+  100% {
+    box-shadow: 0 0 5px 0 white;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  padding: 0 2px 5rem 2px;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  display: block;
+  width: 30%;
+  height: 30px;
+  border-radius: 30px;
+  border: none;
+  padding: 10px 20px 0;
+  text-decoration: none;
+  font-weight: bold;
+
+  opacity: 0.8;
+  background-color: orangered;
+  color: antiquewhite;
+  margin: 0 auto;
+  transition: all 0.2s ease-out;
+}
+
+.btn:hover {
+  animation: glow 1s infinite alternate;
+}
+.btn:active {
+  transform: translateY(3px);
+}
+
+#setting {
+  width: 30px;
+  background-color: transparent;
+  color: transparent;
+  margin-top: -10px;
+  display: inline-block;
+}
+.score-box {
+  width: 30%;
+  height: 5%;
+  background-color: #9e9ba5;
+  color: darkblue;
+  padding: 1px 0.5px;
+  margin: 5px auto;
+  margin-top: 20px;
+  text-align: center;
+  border-radius: 10px;
+  border: 2px solid darkblue;
+  animation: glow 1s infinite alternate;
+}
+
+.btn--settings {
+  position: relative;
+  background-color: seagreen;
+}
+
+.gear {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 45%;
+  left: 25%;
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.settings {
+  line-height: 2rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.modal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(158, 155, 165, 0.5);
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  text-align: center;
+  align-content: center;
+}
+.modal-container {
+  background-color: seagreen;
+  width: 20%;
+  border-radius: 2rem;
+  margin: 0 auto;
+  padding: 20%;
+}
+.modal-header {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: none;
+}
+
+.dark {
+  width: 100%;
+  margin: 0 auto;
+}
+.dark > p {
+  color: aliceblue;
+  font-size: 20px;
+  font-family: "Poetsen One", sans-serif;
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 200px;
+  height: 100px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 90px;
+  height: 90px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background: #bada55;
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 130px;
+}
+
+dark-mode {
+  background-color: black;
+}
+
+.body {
+  background-image: linear-gradient(rgb(1, 7, 11), rgb(1, 4, 6));
+}

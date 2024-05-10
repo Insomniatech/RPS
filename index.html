@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rock Scissor Paper</title>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="modal-container">
+        <h1 class="modal-header">Settings</h1>
+        <div class="dark">
+          <p>Dark mode</p>
+          <input type="checkbox" id="switch" /><label for="switch"></label>
+          <a href="" class="btn btn--back"><span>Back</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- header -->
+    <header class="header">
+      <h1>Rock Paper Scissor</h1>
+    </header>
+
+    <!-- images and score boxes -->
+    <div class="board">
+      <div class="board__left">
+        <h2>Player 1</h2>
+        <div class="image">
+          <img src="images/question-mark.jpeg" alt="" class="img left__img" />
+        </div>
+        <div class="score-box"><h2 class="score-box-left">0</h2></div>
+      </div>
+      <div class="vertical-divider"></div>
+      <div class="board__right">
+        <h2>Player 2</h2>
+        <div class="image">
+          <img src="images/question-mark.jpeg" alt="" class="img right__img" />
+        </div>
+        <div class="score-box"><h2 class="score-box-right">0</h2></div>
+      </div>
+    </div>
+    <div class="buttons">
+      <a href="" class="btn btn--play"><span>Play!</span></a>
+      <a href="" class="btn btn--reset"><span>Reset</span></a>
+      <a href="" class="btn btn--settings">
+        <span class="gear">&#9881;</span>
+        <span class="settings">settings</span>
+      </a>
+      <!-- <input type="button" value="Play!" class="btn btn--play" />
+      <input type="button" value="Reset" class="btn btn--reset" /> -->
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
